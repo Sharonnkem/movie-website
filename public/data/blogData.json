@@ -1,0 +1,46 @@
+[
+  {
+    "_id": 1,
+    "thumbnail": "../assets/blogs/blog-1.jpeg",
+    "category": "5D Thriller",
+    "title": "The choice of pain is the most worthy pleasure at the time",
+    "author": {
+      "name": "Maria Doe",
+      "image": "../assets/blogs/blog-author-1.jpg"
+    },
+    "date": "Jan 1, 2023"
+  },
+  {
+    "_id": 2,
+    "thumbnail": "../assets/blogs/blog-2.jpeg",
+    "category": "Adventure",
+    "title": "We can be loosed so that it receives them as in which because and loosed",
+    "author": {
+      "name": "Allisa Mayer",
+      "image": "../assets/blogs/blog-author-2.jpg"
+    },
+    "date": "May 10, 2023"
+  },
+  {
+    "_id": 3,
+    "thumbnail": "../assets/blogs/blog-3.jpeg",
+    "category": "Action",
+    "title": "But unless he hates a great deal, he will suffer no pain",
+    "author": {
+      "name": "Mark Dower",
+      "image": "../assets/blogs/blog-author-3.jpg"
+    },
+    "date": "June 23, 2023"
+  },
+  {
+    "_id": 4,
+    "thumbnail": "../assets/blogs/blog-4.jpeg",
+    "category": "Romance",
+    "title": "Not the matter of things, for with which I smell the distinction less",
+    "author": {
+      "name": "Lisa Neymar",
+      "image": "../assets/blogs/blog-author-4.jpg"
+    },
+    "date": "July 23, 2023"
+  }
+]
