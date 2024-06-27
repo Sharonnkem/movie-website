@@ -19,7 +19,7 @@ function MovieContent({ movie }) {
     <div className="button">
       <Button icon={<ion-icon name="play-outline"></ion-icon>} 
       name='Trailer' 
-      color='#ff3700' 
+      color='#48a888' 
       bgColor='#ffffff' />
       <Button icon={<ion-icon name="play-outline"></ion-icon>} 
       name='UpCloud' 
