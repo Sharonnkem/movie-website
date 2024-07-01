@@ -6,14 +6,8 @@
   transform: scale(0);
   transition: 1s;
   z-index: 1000;
+  padding-left: 50px;
 }
-
-.class {
-  position: absolute;
-  left: 5rem;
-  top: 6rem;
-}
-
 
 .banner .content.active {
   visibility: visible;
@@ -58,5 +52,57 @@
   font-weight: 400;
   line-height: 1.5em;
   color: #ffffff;
-  margin: 20px 0 20px;
+  margin: 10px 0 10px;
+}
+
+@media (max-width: 1024px) {
+  .banner .content {
+    max-width: 100%;
+  }
+
+  .banner .content p {
+    font-size: 1em;
+    line-height: 1.2em;
+    font-weight: 400;
+  }
+
+  .movie-title {
+    margin-bottom: 15px;
+    max-width: 200px;
+  }
+
+  .banner .content.active {
+    padding-left: 20px;
+  }
+  
+  .banner .content h4 span {
+    font-size: 1rem;
+  }  
+}
+
+
+@media (max-width: 768px) {
+  .banner .content {
+    max-width: 100%;
+  }
+
+  .banner .content p {
+    font-size: 0.8em;
+    line-height: 1.1em;
+    font-weight: 400;
+  }
+
+  .movie-title {
+    margin-bottom: 10px;
+    max-width: 200px;
+    max-height: 70px;
+  }
+
+  .banner .content.active {
+    padding-left: 20px;
+  }
+  
+  .banner .content h4 span {
+    font-size: 1.5rem;
+  }  
 }

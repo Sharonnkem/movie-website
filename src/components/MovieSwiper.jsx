@@ -36,6 +36,6 @@ function MovieSwiper({ slides, slideChange }) {
           ))}
     </Swiper>
   );
-}
+} 
 
 export default MovieSwiper;

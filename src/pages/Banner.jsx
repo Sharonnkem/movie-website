@@ -5,41 +5,13 @@ import MovieDate from '../components/MovieDate';
 import PlayBtn from '../components/PlayBtn';
 import MovieSwiper from '../components/MovieSwiper';
 
-function Banner() {
-  const [allMovies, setAllMovies] = useState([]);
+function Banner({ handleSlideChange, allMovies }) {
   const [activeMovies, setActiveMovies] = useState([]);
 
-  const fetchData = () => {
-    fetch('http://localhost:3000/data/movieData.json')
-      .then(res => res.json())
-      .then(data => {
-        setAllMovies(data);
-        const filteredActiveMovies = data.filter(movie => movie.active);
-        setActiveMovies(filteredActiveMovies);
-      })
-      .catch(e => console.log(e.message));
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  // This useEffect will run whenever allMovies changes
   useEffect(() => {
     const filteredActiveMovies = allMovies.filter(movie => movie.active);
     setActiveMovies(filteredActiveMovies);
   }, [allMovies]);
-
-  const handleSlideChange = id => {
-    const newMovies = allMovies.map(movie => {
-      movie.active = false;
-      if (movie._id === id) {
-        movie.active = true;
-      }
-      return movie;
-    });
-    setAllMovies(newMovies);
-  };
 
   return (
     <div className="banner">

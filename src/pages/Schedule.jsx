@@ -92,7 +92,7 @@ function Schedule() {
             </ul>
           
         </div>
-        <div className="row mt-5">
+        <div className="row mt-6">
         {movies && 
             movies.length > 0 && 
             movies.map(movie => <Card key={movie._id} movie={movie}/>)

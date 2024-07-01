@@ -1,3 +1,4 @@
+/* header.css */
 header {
   position: fixed;
   top: 0;
@@ -6,7 +7,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 100px;
+  padding: 20px 30px;
   transition: 0.5s;
   z-index: 10000;
 }
@@ -16,12 +17,11 @@ header.scrolled {
   border-bottom: 2px solid var(--primary);
   border-image: linear-gradient(90deg, transparent, var(--primary), transparent) 30;
   backdrop-filter: blur(20px);
-  padding: 10px 100px;
 }
 
 .logo {
   font-family: 'Racing Sans One', cursive;
-  font-size: 35px;
+  font-size: 28px;
   color: #ffffff;
   letter-spacing: 2px;
   font-weight: 800;
@@ -30,5 +30,147 @@ header.scrolled {
 }
 
 .nav {
-  display: flex; 
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: max-height 0.3s ease;
+}
+
+.nav li {
+  margin: 0 20px;
+}
+
+.nav li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav li a:hover,
+.nav li a.active {
+  color: var(--primary);
+}
+
+/* Responsive styles */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle .hamburger {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  position: relative;
+}
+
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: '';
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.nav-toggle .hamburger::before {
+  top: -8px;
+}
+
+.nav-toggle .hamburger::after {
+  bottom: -8px;
+}
+
+.nav-open {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .logo {
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+  }
+
+  header {
+    padding: 20px 20px;
+  }
+  
+}
+
+
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: black;
+    flex-direction: column;
+    max-height: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header {
+    padding: 20px 20px;
+  }
+
+  .nav-open {
+    max-height: 500px; /* Adjust as needed */
+    flex-direction: column;
+  }
+
+  .hide {
+    display: flex;
+  }
+
+  .show {
+    display: none;
+  }
+
+  .nav li {
+    margin: 10px 0;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .header-actions {
+    display: flex;
+  }
+
+  .logo {
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 800;
+    padding-right: 5px;
+  }
+  
 }

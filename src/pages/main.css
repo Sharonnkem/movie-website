@@ -75,3 +75,19 @@ section p{
   letter-spacing: 1px;
   margin-bottom: 40px;
 }
+
+@media (max-width: 1024px) {
+  section {
+    padding: 120px 50px 20px;
+    width: 100%;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 120px 20px 20px;
+    width: 100%;
+  }
+  
+}

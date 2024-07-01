@@ -15,9 +15,9 @@ function PlayBtn({ movie }) {
       <a href="/" className="playBtn" onClick={toggleModal}>
       <ion-icon name="play-outline"></ion-icon></a>
               <p>Watch Movie</p></div>
-              {movie.active && (<Modal movie={movie} status={modal} toggleModal={toggleModal} />)}
+              {movie.active && (<Modal movie={movie} status={modal} toggleModal={toggleModal} />)}  
     </>
-  );
+  ); 
 }
 
 export default PlayBtn;

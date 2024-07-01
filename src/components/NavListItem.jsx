@@ -12,7 +12,7 @@ function NavListItem({ nav, navOnClick }) {
         }}>
           {nav.name}</a>
     </li>
-  );
+  ); 
 }
 
 export default NavListItem; 

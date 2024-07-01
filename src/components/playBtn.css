@@ -12,6 +12,8 @@
   transform: scale(1);
 }
 
+
+
 .banner .trailer p {
   color: var(--primary);
   font-size: 1.5rem;
@@ -65,4 +67,18 @@
     opacity: 1;
     filter: blur(10px);
   }
+}
+
+@media (max-width: 768px) {
+  .banner .playBtn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .banner .trailer p {
+    font-size: 1.1rem;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
 }

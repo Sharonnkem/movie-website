@@ -16,4 +16,9 @@
 .nav li a:hover,
 .nav li a.active {
   color: var(--primary);
-}
+} 
+
+@media (max-width: 768px) {
+  .nav li {
+    margin-bottom: 15px;
+  }}

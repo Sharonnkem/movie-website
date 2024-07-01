@@ -26,3 +26,20 @@
   -webkit-mask-clip: text, padding-box;
   -webkit-mask-composite: xor;
 }
+
+@media (max-width: 1024px) {
+  .banner .date h2 {
+    font-size: 5rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    }
+  
+}
+
+@media (max-width: 768px) {
+  .banner .date h2 {
+  font-size: 5rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  }
+}
