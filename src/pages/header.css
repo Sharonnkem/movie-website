@@ -97,7 +97,8 @@ header.scrolled {
   flex-direction: row;
 }
 
-.header-actions {
+.header-actions,
+.show {
   display: flex;
   align-items: center;
 }

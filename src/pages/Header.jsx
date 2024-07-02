@@ -45,8 +45,8 @@ function Header({ scroll, handleSlideChange }) {
       <div className="header-actions">
         <Search setResults={setResults} clearResults={clearResults} />
         <SearchResultList results={results} slideChange={handleSlideChange} clearResults={clearResults} />
-        <div className="show"><Button icon={<ion-icon name="log-in-outline"></ion-icon>} name="Sign in" /></div>
       </div>
+      <div className="show"><Button icon={<ion-icon name="log-in-outline"></ion-icon>} name="Sign in" /></div>
 
       <button className="nav-toggle" onClick={toggleNav}>
         <span className="hamburger"></span>

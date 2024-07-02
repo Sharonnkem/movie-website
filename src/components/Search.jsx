@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './search.css';
 
-function Search({ setResults, clearResults }) {
+function Search({ setResults }) {
   const [input, setInput] = useState("");
 
   const fetchData = (value) => {
