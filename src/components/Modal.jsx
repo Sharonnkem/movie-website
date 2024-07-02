@@ -15,7 +15,7 @@ function Modal({ movie, status, toggleModal }) {
       frameBorder="0"
       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowFullScreen 
-      sandbox="allow-same-origin allow-scripts"
+      sandbox="allow-scripts allow-same-origin allow-presentation"
       ></iframe>
     </div>
 
