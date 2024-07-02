@@ -5,7 +5,7 @@ function Search({ setResults, clearResults }) {
   const [input, setInput] = useState("");
 
   const fetchData = (value) => {
-    fetch('http://localhost:3000/data/movieData.json')
+    fetch('https://movie-website-ten-iota.vercel.app/data/movieData.json')
       .then(res => res.json())
       .then((json) => {
         const results = json.filter((user) => {

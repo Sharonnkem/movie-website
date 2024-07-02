@@ -28,7 +28,7 @@ function App() {
   }, [scroll]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/movieData.json')
+    fetch('https://movie-website-ten-iota.vercel.app/data/movieData.json')
       .then(res => res.json())
       .then(data => {
         setAllMovies(data);

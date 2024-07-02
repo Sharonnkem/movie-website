@@ -6,7 +6,7 @@ function Blog() {
   const [blogs, setBlogs] = useState([]);
 
   const fetchData = () => {
-    fetch('http://localhost:3000/data/blogData.json')
+    fetch('https://movie-website-ten-iota.vercel.app/data/blogData.json')
       .then(res => res.json())
       .then(data => {
         setBlogs(data);
