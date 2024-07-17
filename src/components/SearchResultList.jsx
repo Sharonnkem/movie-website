@@ -18,3 +18,4 @@ function SearchResultList({ results, slideChange, clearResults }) {
 }
 
 export default SearchResultList;
+ 

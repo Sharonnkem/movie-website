@@ -4,13 +4,14 @@ import Schedule from './Schedule';
 import Trend from './Trend';
 import Blog from './Blog';
 
-function Main() {
-  return <main>
-    <Schedule />
-    <Trend />
-    <Blog />
-  </main>;
-  
+function Main({ handleSlideChange }) {
+  return (
+    <main>
+      <Schedule handleSlideChange={handleSlideChange} />
+      <Trend handleSlideChange={handleSlideChange} />
+      <Blog />
+    </main>
+  );
 }
 
 export default Main;

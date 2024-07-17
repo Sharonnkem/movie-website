@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './schedule.css';
 import Card from '../components/Card';
 
-function Schedule() {
+function Schedule({ handleSlideChange }) {
   const filterList = [
     {
       _id: 1,
@@ -81,27 +81,23 @@ function Schedule() {
           <h4 className="section-title">Movies</h4>
         </div>
         <div className="row">
-            <ul className="filters">
-              {
-                filters.map(filter => (
-                  <li key={filter._id} className={`${filter.active ? 'active': undefined}`} 
-                  onClick={() => {handleFilterMovies(filter.name);}}>
-                    {filter.name}</li>
-                ))
-              }
-            </ul>
-          
+          <ul className="filters">
+            {filters.map(filter => (
+              <li key={filter._id} className={`${filter.active ? 'active': undefined}`} 
+                onClick={() => {handleFilterMovies(filter.name);}}>
+                {filter.name}
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="row mt-6">
-        {movies && 
-            movies.length > 0 && 
-            movies.map(movie => <Card key={movie._id} movie={movie}/>)
+          {movies && movies.length > 0 && 
+            movies.map(movie => <Card key={movie._id} movie={movie} slideChange={handleSlideChange} />)
           }  
         </div>
       </div>
     </section>
   );
-  
 }
 
 export default Schedule;

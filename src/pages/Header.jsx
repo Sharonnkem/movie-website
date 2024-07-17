@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './header.css';
 import NavListItem from '../components/NavListItem';
 import navListData from '../data/navListData';
@@ -46,7 +47,11 @@ function Header({ scroll, handleSlideChange }) {
         <Search setResults={setResults} clearResults={clearResults} />
         <SearchResultList results={results} slideChange={handleSlideChange} clearResults={clearResults} />
       </div>
-      <div className="show"><Button icon={<ion-icon name="log-in-outline"></ion-icon>} name="Sign in" /></div>
+      <div className="show">
+        <Link to="/signin">
+          <Button icon={<ion-icon name="log-in-outline"></ion-icon>} name="Sign in" />
+        </Link>
+      </div>
 
       <button className="nav-toggle" onClick={toggleNav}>
         <span className="hamburger"></span>

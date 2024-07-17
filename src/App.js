@@ -1,16 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-
 import 'swiper/css';
 
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './pages/Header';
 import Banner from './pages/Banner';
 import Main from './pages/Main';
 import Footer from './pages/Footer';
 import BackToTopBtn from './components/BackToTopBtn';
+import Signin from './pages/Signin';
+import SignUp from './pages/SignUp';
+import Password from './pages/Password';
+
 
 function App() {
   const [scroll, setScroll] = useState(0);
@@ -39,25 +43,31 @@ function App() {
   const handleSlideChange = id => {
     console.log(`Slide change triggered for id: ${id}`);
     const newMovies = allMovies.map(movie => {
-      movie.active = false;
-      if (movie._id === id) {
-        movie.active = true;
-      }
+      movie.active = movie._id === id;
       return movie;
     });
     setAllMovies(newMovies);
   };
 
   return (
-    <>
+    <Router>
       <Header scroll={scroll} handleSlideChange={handleSlideChange} />
-      <Banner handleSlideChange={handleSlideChange} allMovies={allMovies} />
-      <Main />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Banner handleSlideChange={handleSlideChange} allMovies={allMovies} />
+            <Main handleSlideChange={handleSlideChange} />
+          </>
+        } />
+        <Route path="/signin" element={<Signin />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/password" element={<Password/>} />
+
+      </Routes>
       <Footer />
       <BackToTopBtn scroll={scroll} />
-    </>
+    </Router>
   );
 }
 
 export default App;
-

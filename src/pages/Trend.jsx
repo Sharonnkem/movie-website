@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './schedule.css';
 import Card from '../components/Card';
 
-function Trend() {
+function Trend({ handleSlideChange }) {
 
   const [data, setData] = useState([]);
   const [movies, setMovies] = useState([]);
@@ -30,17 +30,14 @@ function Trend() {
         <div className="row">
           <h4 className="section-title">TV Shows</h4>
         </div>
-        
         <div className="row mt-5">
-        {movies && 
-            movies.length > 0 && 
-            movies.map(movie => <Card key={movie._id} movie={movie}/>)
+          {movies && movies.length > 0 && 
+            movies.map(movie => <Card key={movie._id} movie={movie} slideChange={handleSlideChange} />)
           }  
         </div>
       </div>
     </section>
   );
-  
 }
 
 export default Trend;

@@ -14,7 +14,7 @@ function Banner({ handleSlideChange, allMovies }) {
   }, [allMovies]);
 
   return (
-    <div className="banner">
+    <div id="banner" className="banner">
       {activeMovies && activeMovies.length > 0 &&
         activeMovies.map(movie => (
           <div className="movie" key={movie._id}>
@@ -23,7 +23,7 @@ function Banner({ handleSlideChange, allMovies }) {
               alt="Background" 
               className={`bgImg ${movie.active ? 'active' : ''}`} 
             />
-            <div className={`container-fluid class`}>
+            <div className="container-fluid">
               <div className="row">
                 <div className="col-lg-6 col-md-12">
                   <MovieContent movie={movie} />
