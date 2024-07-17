@@ -85,7 +85,7 @@ function SignUp() {
       <div className="signup">
       <p> Have an account?</p>
       <Link to="/signin">
-      <p><a href="/signin">Sign in now!</a></p>
+      <p>Sign in now!</p>
       </Link>
       </div>
     </div>

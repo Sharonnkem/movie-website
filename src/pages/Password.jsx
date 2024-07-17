@@ -50,7 +50,7 @@ function Password() {
       <div className="signup">
       <p> Don't have an account?</p>
       <Link to="/signup">
-      <p><a href="/signin">Sign up now!</a></p>
+      <p>Sign up now!</p>
       </Link>
       </div>
     </div>

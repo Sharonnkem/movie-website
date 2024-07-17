@@ -63,7 +63,7 @@ function Signin() {
           <p><ion-icon name="log-in-outline"></ion-icon> Sign up</p>
         </Link>
         <Link to="/password">
-        <p><a href="/">Forget password?</a></p>
+        <p>Forget password?</p>
         </Link>
       </div>
     </div>
